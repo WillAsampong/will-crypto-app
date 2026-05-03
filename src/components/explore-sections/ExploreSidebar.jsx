@@ -6,8 +6,8 @@ const ExploreSidebar = ({ children }) => {
     <aside className="bg-white">
       {/* GET STARTED CARD */}
       <div className="px-10 py-10">
-        <div className="relative overflow-hidden rounded-[32px] bg-[#0052ff] px-6 py-7 text-white shadow-xl">
-          <div className="relative z-10 max-w-[150px]">
+        <div className="relative overflow-hidden rounded-4xl bg-[#0052ff] px-6 py-7 text-white shadow-xl">
+          <div className="relative z-10 max-w-37.5">
             <h3 className="text-[21px] font-bold leading-tight">
               Get started
             </h3>
@@ -19,7 +19,7 @@ const ExploreSidebar = ({ children }) => {
             </button>
           </div>
 
-          <div className="absolute right-[-10px] top-1/2 h-[160px] w-[180px] -translate-y-1/2">
+          <div className="absolute -right-2.5 top-1/2 h-40 w-45 -translate-y-1/2">
             <img src={getStartedImage} alt="" className="h-full w-full object-contain" />
           </div>
         </div>

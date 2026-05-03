@@ -166,7 +166,7 @@ function MegaMenu({ menu }) {
 
     return (
         <div className="absolute left-0 top-full z-50 w-full border-t border-gray-100 bg-white shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
-            <div className="mx-auto grid max-w-[1240px] gap-8 px-8 py-10 lg:grid-cols-[1fr_1fr_1.5fr]">
+            <div className="mx-auto grid max-w-310 gap-8 px-8 py-10 lg:grid-cols-[1fr_1fr_1.5fr]">
                 {menu.columns.map((column, colIndex) => (
                     <div key={colIndex} className="space-y-1">
                         {column.map((item, idx) => {
@@ -203,7 +203,7 @@ function MegaMenu({ menu }) {
                 ))}
 
                 <div className="flex flex-row items-start gap-6 border-l border-gray-100 pl-10">
-                    <div className="relative h-[120px] w-[120px] shrink-0 overflow-hidden rounded-[24px]">
+                    <div className="relative h-30 w-30 shrink-0 overflow-hidden rounded-3xl">
                         {menu.promo.image ? (
                             <img 
                                 src={menu.promo.image} 
@@ -337,4 +337,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default Navbar;

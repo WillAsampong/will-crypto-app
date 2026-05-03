@@ -10,11 +10,20 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import SignUpType from "./pages/SignUpType";
 import ScrollToTop from "./components/common/ScrollToTop";
+import WarningBanner from "./components/WarningBanner";
+import Profile from "./pages/Profile";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import FooterDisclaimer from "./components/FooterDisclaimer";
+import AddCrypto from "./pages/AddCrypto";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+
+      {/* Sticky warning banner — sits above NavBar on every page */}
+      <WarningBanner />
+
       <Routes>
 
         <Route element={<Layout />}>
@@ -22,13 +31,24 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/assets/:id" element={<AssetDetail />} />
           <Route path="/learn" element={<Learn />} />
+          <Route path="/add-crypto" element={<AddCrypto />} />
         </Route>
 
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUpType />} />
         <Route path="/signup/details" element={<SignUp />} />
+        <Route 
+          path="/profile" 
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          } 
+        />
 
       </Routes>
+
+      <FooterDisclaimer />
     </BrowserRouter>
   );
 }

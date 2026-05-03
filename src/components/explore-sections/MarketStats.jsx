@@ -5,7 +5,7 @@ const MarketStats = ({ statsCards }) => {
   return (
     <div className="px-9 py-12">
       <div className="flex items-start justify-between gap-6">
-        <div className="max-w-[900px]">
+        <div className="max-w-225">
           <h2 className="text-[31px] font-semibold tracking-[-0.02em] text-black">
             Market stats
           </h2>
@@ -35,7 +35,7 @@ const MarketStats = ({ statsCards }) => {
         {statsCards.map((card) => (
           <div
             key={card.title}
-            className="rounded-[24px] bg-[#f1f3f5] px-5 py-4"
+            className="rounded-3xl bg-[#f1f3f5] px-5 py-4"
           >
             <p className="text-[13px] text-[#5b616e]">{card.title}</p>
 
@@ -48,7 +48,7 @@ const MarketStats = ({ statsCards }) => {
               <img
                 src={card.chart}
                 alt={card.title}
-                className="h-[80px] w-full object-contain"
+                className="h-20 w-full object-contain"
               />
             </div>
           </div>

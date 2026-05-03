@@ -1,13 +1,53 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoadingScreen from "../components/common/LoadingScreen";
 import AuthLayout from "../components/auth/AuthLayout";
 import AuthInput from "../components/auth/AuthInput";
 import AuthSocialButtons from "../components/auth/AuthSocialButtons";
 import Button from "../components/ui/Button";
+import { useAuth } from "../context/AuthContext";
+import { api } from "../lib/api";
 
 function SignIn() {
   const [isLoading, setIsLoading] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState("");
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+
+    // Basic client-side validation
+    if (!email || !password) {
+      setError("Please enter both email and password.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      // GET /api/login — credentials sent as JSON body
+      // The backend reads req.body.email and req.body.password
+      const response = await api.get("/login", {
+        params: { email, password },
+      });
+
+      // Store the user + token in context and localStorage
+      login(response.data);
+
+      // Redirect to the home page on success
+      navigate("/");
+    } catch (err) {
+      setError(
+        err.response?.data?.message || "Login failed. Please check your credentials."
+      );
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,10 +65,26 @@ function SignIn() {
       <AuthInput 
         label="Email"
         placeholder="Your email address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
 
-      <Button variant="primary" size="auth" className="mt-5 bg-[#86a7eb]">
-        Continue
+      <AuthInput 
+        label="Password"
+        placeholder="Enter your password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      {/* Error message */}
+      {error && (
+        <div role="alert" className="text-sm text-red-600 bg-red-50 border border-red-200 p-3 rounded-lg">
+          {error}
+        </div>
+      )}
+
+      <Button variant="primary" size="auth" className="mt-5 bg-[#86a7eb] rounded-full" onClick={handleSubmit}>
+        {submitting ? "Signing in..." : "Continue"}
       </Button>
 
       {/* OR */}

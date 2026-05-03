@@ -26,7 +26,7 @@ const NewOnCoinbase = ({ newOnCoinbase, scrollRef, onScroll }) => {
         {newOnCoinbase.map((coin) => (
           <div
             key={coin.name}
-            className="min-w-[170px] rounded-[24px] bg-[#f1f3f5] px-5 py-5"
+            className="min-w-42.5 rounded-3xl bg-[#f1f3f5] px-5 py-5"
           >
             <div
               className={`flex h-10 w-10 items-center justify-center rounded-xl ${coin.logoBg}`}

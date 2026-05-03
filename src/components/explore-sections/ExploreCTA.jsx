@@ -7,14 +7,14 @@ const ExploreCTA = () => {
     <section className="mt-auto w-full bg-[#0052ff] px-10 pt-16 pb-12">
       <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
         {/* LEFT TEXT */}
-        <div className="max-w-[720px]">
+        <div className="max-w-180">
           <h2 className="text-[28px] font-normal leading-[1.1] tracking-[-0.03em] text-white">
             Create a Coinbase account to trade
             <br />
             crypto. It’s quick, easy, and secure.
           </h2>
 
-          <button className="mt-8 flex h-[54px] w-full max-w-[360px] items-center justify-between rounded-full bg-[#eef1f4] px-8 text-[16px] font-semibold text-black transition-colors hover:bg-white">
+          <button className="mt-8 flex h-13.5 w-full max-w-90 items-center justify-between rounded-full bg-[#eef1f4] px-8 text-[16px] font-semibold text-black transition-colors hover:bg-white">
             <span>Start Trading</span>
             <span className="text-[28px] leading-none">→</span>
           </button>
@@ -22,7 +22,7 @@ const ExploreCTA = () => {
 
         {/* RIGHT DESIGN */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative h-[120px] w-full max-w-[380px]">
+          <div className="relative h-30 w-full max-w-95">
             <img 
               src={blueBottomImage} 
               alt="Start trading" 

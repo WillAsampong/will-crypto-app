@@ -12,7 +12,7 @@ const CryptoPrices = ({ coins, assetCharts }) => {
           </span>
         </h2>
 
-        <p className="mt-4 max-w-[900px] text-[18px] text-[#5b616e]">
+        <p className="mt-4 max-w-225 text-[18px] text-[#5b616e]">
           The overall crypto market is growing this week. As of today, the total crypto market capitalization is 24 trillion, representing a 0.34% increase from last week.
         </p>
 
@@ -60,7 +60,7 @@ const CryptoPrices = ({ coins, assetCharts }) => {
               <div className="text-[18px] text-[#6b7280]">☆</div>
 
               <div className="flex items-center gap-3">
-                <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#f1f3f5]">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f1f3f5]">
                   {coin.logo && (
                     <img
                       src={coin.logo}

@@ -18,7 +18,7 @@ const ExploreHero = () => {
       </div>
 
       <div className="flex justify-start lg:justify-end">
-        <div className="flex h-[60px] w-full max-w-[440px] items-center rounded-full bg-[#f1f3f5] px-7">
+        <div className="flex h-15 w-full max-w-110 items-center rounded-full bg-[#f1f3f5] px-7">
           <Search size={24} className="text-black" />
           <input
             type="text"

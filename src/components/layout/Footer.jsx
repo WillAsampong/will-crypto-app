@@ -70,16 +70,16 @@ function Footer() {
                 {/* Social Icons */}
                 <div className="mt-8 mb-6 flex items-center gap-8">
                     <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">
-                        <img src={xLight} alt="X" className="h-[14px] w-auto" />
+                        <img src={xLight} alt="X" className="h-3.5 w-auto" />
                     </a>
                     <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">
-                        <img src={linkedinLight} alt="LinkedIn" className="h-[14px] w-auto" />
+                        <img src={linkedinLight} alt="LinkedIn" className="h-3.5 w-auto" />
                     </a>
                     <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">
-                        <img src={instagramLight} alt="Instagram" className="h-[14px] w-auto" />
+                        <img src={instagramLight} alt="Instagram" className="h-3.5 w-auto" />
                     </a>
                     <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">
-                        <img src={tiktokLight} alt="TikTok" className="h-[14px] w-auto" />
+                        <img src={tiktokLight} alt="TikTok" className="h-3.5 w-auto" />
                     </a>
                 </div>
 
@@ -110,13 +110,13 @@ function Footer() {
 
                         {/* Left: Download the App */}
                         <div>
-                            <img src={downloadApp} alt="Download the App" className="h-[18px] w-auto mb-4" />
+                            <img src={downloadApp} alt="Download the App" className="h-4.5 w-auto mb-4" />
                             <div className="flex flex-col gap-4">
                                 <a href="#">
-                                    <img src={googlePlay} alt="Get it on Google Play" className="h-[30px] w-auto rounded-[6px]" />
+                                    <img src={googlePlay} alt="Get it on Google Play" className="h-7.5 w-auto rounded-md" />
                                 </a>
                                 <a href="#">
-                                    <img src={appStore} alt="Download on the App Store" className="h-[30px] w-auto rounded-[6px]" />
+                                    <img src={appStore} alt="Download on the App Store" className="h-7.5 w-auto rounded-md" />
                                 </a>
                             </div>
                         </div>
