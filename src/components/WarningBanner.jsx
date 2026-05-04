@@ -13,7 +13,7 @@ export default function WarningBanner() {
   return (
     <div
       role="alert"
-      className="sticky top-0 z-60 w-full bg-amber-100 border-b border-amber-300 text-amber-900 shadow-sm"
+      className="sticky top-0 z-10 w-full bg-yellow-400 border-b border-amber-300 text-amber-900 shadow-sm"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 px-4 py-2 text-xs sm:text-sm">
         <div className="flex items-center gap-2 min-w-0">

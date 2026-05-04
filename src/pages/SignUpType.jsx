@@ -59,7 +59,7 @@ function SignUpType() {
       </div>
 
       {/* Main Content */}
-      <div className="mx-auto flex max-w-[500px] flex-col items-center px-6 pt-24 pb-20">
+      <div className="mx-auto flex max-w-125 flex-col items-center px-6 pt-24 pb-20">
         <h1 className="text-center text-[32px] font-semibold leading-tight tracking-tight text-[#0a0b0d]">
           What kind of account are you creating?
         </h1>
@@ -69,7 +69,7 @@ function SignUpType() {
             <button
               key={option.id}
               onClick={() => handleSelectType(option.id)}
-              className={`group flex items-center gap-6 rounded-[12px] border p-6 text-left transition-all duration-200 ${
+              className={`group flex items-center gap-6 rounded-xl border p-6 text-left transition-all duration-200 ${
                 selectedType === option.id
                   ? "border-[#1652f0] ring-1 ring-[#1652f0]"
                   : "border-[#eceff1] hover:bg-[#f4f7f9]"

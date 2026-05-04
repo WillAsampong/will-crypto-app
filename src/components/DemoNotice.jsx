@@ -5,7 +5,7 @@ export default function DemoNotice() {
   return (
     <div
       role="alert"
-      className="flex items-start gap-2 bg-yellow-50 border border-yellow-200 text-yellow-900 rounded-lg px-3 py-2.5 text-sm font-semibold"
+      className="flex items-start gap-2 bg-yellow-300 border border-yellow-200 text-yellow-900 rounded-lg px-3 py-2.5 text-sm font-semibold"
     >
       <svg
         className="w-5 h-5 shrink-0 text-yellow-700 mt-0.5"
